@@ -3,6 +3,8 @@
   "description": "一个注定不平凡的程序员",
   "language": "zh",
   "plugins": [
+    "disqus",
+    "github",
     "editlink",
     "prism",
     "-highlight",
@@ -11,9 +13,15 @@
     "sitemap"
   ],
   "pluginsConfig": {
+    "disqus": {
+      "shortName": "point the bug"
+    },
+    "github": {
+      "url": "https://github.com/Die4passion"
+    },
     "editlink": {
-      "base": "https://github.com/zhaoda/webpack-handbook/blob/master/content",
-      "label": "编辑本页"
+      "base": "https://www.gitbook.com/book/die4passion/notes/edit",
+      "label": "编辑内容"
     },
     "baidu": {
         "token": "a9787f0ab45d5e237bab522431d0a7ec"
