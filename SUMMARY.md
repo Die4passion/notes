@@ -1,26 +1,25 @@
 # Summary
-文章列表
-* [Introduction](README.md)
-* [Linux类]()
- - [Linux三日速成](linux/linxx.md)
- - [mysql](linux/mysql.md)
- - [正则表达式](linux/regular.md)
- - [Redis](linux/Redis.md)
- - [大型网站优化](linux/youhua.md)
 
+* [Introduction](README.md)
+* Linux类
+    * [Linux三日速成](linux/linxx.md)
+    * [mysql](linux/mysql.md)
+    * [正则表达式](linux/regular.md)
+    * [Redis](linux/Redis.md)
+    * [大型网站优化](linux/youhua.md)
 * [git常用命令](git/git-bash.md)
-* [html+css]()
- - [html-day1](html/HTML_DAY1.md)
- - [html-day2](html/HTML_DAY2.md)
- - [html-day3](html/HTML_DAY3.md)
- - [css-day1](html/CSS_DAY1.md)
- - [css-day2](html/CSS_DAY2.md)
- - [css-day3](html/CSS_DAY3.md)
-* [JS笔记]()
- - [JS-day1](js/JAVASCRIPT_DAY1.md)
- - [JS-day2](js/JAVASCRIPT_DAY2.md)
- - [JS-day3](js/JAVASCRIPT_DAY3.md)
-* [杂七杂八]()
- - [心灵鸡汤](others/funny.md)
- - [程序算法与人生](others/rensheng.md)
+* html+css
+    * [html-day1](html/HTML_DAY1.md)
+    * [html-day2](html/HTML_DAY2.md)
+    * [html-day3](html/HTML_DAY3.md)
+    * [css-day1](html/CSS_DAY1.md)
+    * [css-day2](html/CSS_DAY2.md)
+    * [css-day3](html/CSS_DAY3.md)
+* JS笔记
+    * [JS-day1](js/JAVASCRIPT_DAY1.md)
+    * [JS-day2](js/JAVASCRIPT_DAY2.md)
+    * [JS-day3](js/JAVASCRIPT_DAY3.md)
+* 杂七杂八
+    * [心灵鸡汤](others/funny.md)
+    * [程序算法与人生](others/rensheng.md)
 
