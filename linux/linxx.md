@@ -1,4 +1,3 @@
-[TOC]
 
 # Linux 3日速成 {#home}
 

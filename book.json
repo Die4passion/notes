@@ -1,33 +1,25 @@
 {
-  "title": "小航的学习总结",
-  "description": "一个注定不平凡的程序员",
-  "language": "zh",
-  "plugins": [
-    "disqus",
-    "github",
-    "editlink",
-    "prism",
-    "-highlight",
-    "baidu",
-    "splitter",
-    "sitemap"
-  ],
-  "pluginsConfig": {
-    "disqus": {
-      "shortName": "point the bug"
-    },
-    "github": {
-      "url": "https://github.com/Die4passion"
-    },
-    "editlink": {
-      "base": "https://www.gitbook.com/book/die4passion/notes/edit",
-      "label": "编辑内容"
-    },
-    "baidu": {
-        "token": "a9787f0ab45d5e237bab522431d0a7ec"
-    },
-    "sitemap": {
-        "hostname": "http://zhaoda.net/"
+    "title": "小航的学习总结",
+    "description": "一个注定不平凡的程序员",
+    "author": "Die4passion",
+    "language": "zh",
+    "plugins": [
+        "github",
+        "prism",
+        "splitter",
+        "-highlight",
+        "-sharing",
+        "prism-themes",
+        "toggle-chapters"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/Die4passion"
+        },
+        "prism": {
+            "css": [
+                "prism-themes/themes/prism-ghcolors.css"
+            ]
+        }
     }
-  }
 }
