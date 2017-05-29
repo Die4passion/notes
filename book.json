@@ -10,7 +10,8 @@
         "-highlight",
         "-sharing",
         "prism-themes",
-        "toggle-chapters"
+        "toggle-chapters",
+        "editlink"
     ],
     "pluginsConfig": {
         "github": {
@@ -20,6 +21,10 @@
             "css": [
                 "prism-themes/themes/prism-ghcolors.css"
             ]
+        },
+        "editlink": {
+        	"base": "https://github.com/Die4passion/notes/blob/master/",
+        	"label": "Edit"
         }
     }
 }
