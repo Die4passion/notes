@@ -276,6 +276,3 @@ td{ border:1px solid #ccc; }
 - 示例：`div { cursor:pointer; }`
 - 注： 常在非A标签上设置成手型，配合JavaScript效果，让用户认为是可以点击的模块。
 
-
-:octocat:———— end ————:octocat:
-------------------------------
