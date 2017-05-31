@@ -6,12 +6,15 @@
 
 >目录:
 >[day1](#day1) `目录、文件、用户`
+
 >[day2](#day2) `vim、权限、命令、任务调度、文件查找、网络配置、远程登录`
+
 >[day3](#day3) `搭建配置ftp、安装配置lamp`
 
 ### *day1*{#day1}
 
 	Start now：
+
 ##### 目录结构
 
 >+ &emsp;/bin &emsp;二进制可执行文件&emsp;`所有用户`
@@ -31,6 +34,7 @@
 + &emsp;/usr &emsp;存放应用程序和文件
 
 #####目录操作
+
 >+ mkdir &emsp;创建目录
 + mkdir -p &emsp;递归创建目录
 + rmdir &emsp;删除空目录
@@ -46,6 +50,7 @@
 + cd - 切换到上次目录
 
 #####文件操作
+
 >+ touch &emsp;创建一个空文件
 + cat &emsp;查看文件内容
 + more less &emsp;多页显示内容
@@ -56,6 +61,7 @@
   &emsp;&emsp;`> 覆盖写    >> 追加写`
 
 #####用户和组操作
+
 >+ useradd &emsp;添加用户
     + -g &emsp;组id
     + -d &emsp;用户主目录
@@ -77,20 +83,25 @@
 
 
 ###*day2*{#day2}
+
 ---
+
 #####vi和vim使用
+
 >+  命令模式
 + &emsp;尾行模式
 + 插入模式
 
 尾行==>>插入
+
 >  - a   光标往后移动一格
 >  - i   什么事都没发生
 >  - o   当前行后插入一行空白行
 >  - s   删除当前光标位置的字符
->
+
 
 尾行模式：
+
 >+ :set nu &emsp;显示行号
 + :set nonu | :set nu! &emsp;不显示行号
 + :w &emsp;保存文档
@@ -106,6 +117,7 @@
 + :syntax on/off  打开 | 关闭 语法高亮
 
 命令模式
+
 >+ h、j、k、l &emsp;左、下、上、右
 + dd &emsp;删除当前行
 + ndd &emsp;删除当前行往下n行
@@ -120,6 +132,7 @@
 + ZZ &emsp;退出编辑，=:x
 
 #####文件权限
+
 >+ chmod -R 741 dir &emsp; 递归修改dir目录下的所有内容权限
 + chmod u+rx  &emsp;给所属用户加上rx权限
 + chmod g-w &emsp; 给用户组去掉w权限
@@ -128,6 +141,7 @@
 + chmod 000 777 640 ...
 
 #####修改文件所属用户和组
+
 >+ chown username filename 修改文件所属用户
 + chgrp groupname filename 修改文件所属组
 + chown username.groupname filename 同时修改
@@ -135,6 +149,7 @@
 + chown -R username.groupname dir 递归修改
 
 #####系统常用命令
+
 >+ grep 关键字 路径  将文件中含有该关键字的行的内容显示出来
 + top &emsp; 任务管理器
 + ps -A &emsp;查看系统所有进程
@@ -147,20 +162,24 @@
 + ifconfig &emsp;查看网络配置
 
 #####文件查找
+
 >+ whereis &emsp;主要用于搜索系统命令和配置文件
 >  `eg:     whereis passwd`
 + locate &emsp;速度快但不能实时搜索，如需实时搜索则先`updatedb`
 + find &emsp;实时搜索，速度慢，参数多，精确搜索用这个
 
 #####任务调度指令
+
 >+ crontab -e(编辑) -l(查看) -r(删除)
 >   文件位置：/var/spool/cron/
 >    调试信息:/var/spool/mail
 
 #####网络配置
+
 > 1. 配置虚拟机网卡
 >    `虚拟机配置文件修改网络适配器为桥接模式`
   2. 修改linux网络配置
+
 ```
 //查看网络配置
 ifconfig
@@ -175,6 +194,7 @@ GATEWAY=127.16.17.1
 //重启网卡
 service network restart
 ```
+
 1. 使用Xshell(或putty)远程登录linux
 
 
@@ -182,6 +202,7 @@ service network restart
 
     安装开发环境
 ---
+
 ##### 搭建ftp服务器
 
 > 1. 关闭selinux  重启centos
@@ -200,6 +221,7 @@ service network restart
 ##### ftp服务器配置
 
 >+ 使用root用户登陆ftp
+
 ```
     vim /etc/vsftpd/ftpusers
     vim /etc/vsftpd/user_list
@@ -207,7 +229,9 @@ service network restart
     //重启vsftpd服务
     service vsftpd restart
 ```
+
 + 设置 白名单 或 黑名单
+
 ```
     vim /etc/vsftpd/vsftpd.conf
     //修改内容
@@ -219,7 +243,9 @@ service network restart
     //userlist_deny=NO：user_list是一个白名单，该文件中的用户允许登录
     //userlist_deny=YES(默认)：user_list是一个黑名单，该文件中的用户被拒绝登录
 ```
+
 + 只允许访问用户主目录
+
 ```
     vim /etc/vsftpd/vsftpd.conf
     //修改内容(去掉注释)
@@ -227,37 +253,50 @@ service network restart
         chroot_list_file=/etc/vsftpd/chroot_list
     //将要限制的用户添加进chroot_list
 ```
+
 ````
     //限定用户test不能telnet，只能ftp
     usermod -s /sbin/nologin neo
 ````
+
 #####linux安装软件
+
 ---
+
 三种安装方式：
+
 >1. rpm: 以软件包的形式安装
+
 ```
     rpm -q   软件名称        //查询软件是否已经安装
     rpm -ivh 软件包路径      //安装软件
     rpm -e    软件名称       //卸载软件
     rpm -qa | grep 软件名称  //利用管道查询软件安装情况
 ```
+
 2. 源码编译安装
+
 ````
     ./configure     //配置软件的安装，可以设置路径和参数
     make            //编译  源码编译成二进制代码
     make install    //把二进制代码复制到相应的目录
 ````
+
 3. yum安装(类似apt-get)
+
 ````
     yum install vsftpd   //要求联网
 ````
+
 压缩和解压文件
+
 >+ 压缩  `tar  cf` 打包文件名 要打包的文件1 文件2
 + 解压   `tar xf/xvf`    解压文件
 
 ##### 安装编译软件
 
 >使用光盘作用yum源
+
 ````
     cd /etc/yum.repos.d/
     //干掉光盘安装
@@ -269,19 +308,25 @@ service network restart
     gpgcheck=0
     enabled=1
 ````
+
 重新挂载光驱
 `mkdir /mnt/sb
 mount /dev/cdrom  /mnt/sb`
+
 >使用yum安装gcc软件
+
 ```
     cd /mnt/sb
     ls
     yum -y install gcc
 ```
+
 使用yum安装gcc++软件
+
 ```
     yum -y install gcc-c++
 ```
+
 #####将服务设置为开机自启
 
 ````
@@ -293,7 +338,6 @@ mount /dev/cdrom  /mnt/sb`
     chkconfig --del  servicename 
     //设置服务开机启动
     chkconfig --level 2345 servicename on
-
 ````
 ####LAMP编译环境搭建
 
@@ -301,7 +345,9 @@ mount /dev/cdrom  /mnt/sb`
     yum -y install gcc 
     yum install gcc-c++
 ```
+
 #####Apache安装
+
 ````
 安装 zlib
 [root@localhost lamp]# tar -xf zlib-1.2.5.tar.gz
@@ -341,13 +387,14 @@ install
 [root@localhost lamp]# tar xf httpd-2.4.17.tar.gz
 [root@localhost lamp]# cd httpd-2.4.17
 [root@localhost httpd-2.4.17]# ./configure --prefix=/usr/local/lamp/apache2 \> --enable-modules=all \
-> --enable-so \
-> --with-apr=/usr/local/apr/ \
-> --with-apr-util=/usr/local/apr-util/ \
-> --with-pcre=/usr/local/pcre/
+   --enable-so \
+   --with-apr=/usr/local/apr/ \
+   --with-apr-util=/usr/local/apr-util/ \
+   --with-pcre=/usr/local/pcre/
 [root@localhost httpd-2.4.17]# make && make install
 兄弟们，可以出去抽根烟，要等一会儿了。。。。。。
 ````
+
 测试Apache
 `ps -A \ grep httpd`
 开启防火墙
@@ -355,6 +402,7 @@ install
 重启防火墙`service iptables restart` 
 
 #####PHP安装
+
 ````
 安装 xml
 [root@localhost httpd-2.4.17]# cd ..
@@ -502,15 +550,19 @@ DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
 ````
 
 添加用户
+
 `[root@localhost mysql-5.6.25]# useradd -s /sbin/nologin -r user`
 
 修改目录权限，将 data 文件夹所有者改为 mysql
+
 `[root@localhost mysql-5.6.25]# chown user.group /usr/local/lamp/mysql/data -R`
 
 复制配置文件
+
 `[root@localhost mysql-5.6.25]# cp support-files/my-default.cnf /etc/my.cnf`
 
 创建mysql测试数据库和系统数据库
+
 ````
     [root@localhost mysql-5.6.25]# cd /usr/local/lamp/mysql
     [root@localhost mysql]# /usr/local/lamp/mysql/scripts/mysql_install_db --user=mysql --datadir=/usr/local/lamp/mysql/data
@@ -521,9 +573,11 @@ DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
 ````
 
 修改密码
+
 `mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password');`
 
 创建允许远程登录的用户
+
 ````
     mysql> CREATE USER 'dashabi'@'%' IDENTIFIED BY '123456';
     mysql> select password('123456');
@@ -531,6 +585,7 @@ DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
 'xxxxxx';    //xxxxx为加密后的密码
 ````
 防火墙中开启3306端口
+
 ````
     setup
     防火墙配置->定制->转发->添加
@@ -581,11 +636,6 @@ DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
 ```
 
 [back to top](#home)
-
-​:happy: :sad: 
-
-
-	[toc]
 
 
     
