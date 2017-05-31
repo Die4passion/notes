@@ -1,7 +1,7 @@
 ##MySQL高级
 
- > 
- > 数据类型 | 
+  
+  数据类型 | 定义
    ---|:---:
    整数类型 | int tinyint bigint smallint
    浮点数类型|float double
@@ -11,8 +11,12 @@
 
 -----
 > 基本语句
+
   创建:  `CREATE datebase/table`
+
   删除:  `DROP datebase/table`
+
   修改表结构： `ALTER table 表名 (add / modify /change /drop ) 字段 `
+
   修改表内容:  `UPDATE 表名 set key = value[key = value ...]`
 
