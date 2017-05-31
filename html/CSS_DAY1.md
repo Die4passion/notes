@@ -452,6 +452,3 @@ p{ backgrouond-color:red; background-image:url(aaa.jpg); background-position: le
 p { background: red url(aaa.jpg) repeat-x left 30px fixed; }
 ```
 
-
-:octocat:———— end ————:octocat:
-------------------------------
