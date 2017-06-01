@@ -25,4 +25,5 @@
 * [杂七杂八](others/78.md)
     - [心灵鸡汤](others/funny.md)
     - [程序算法与人生](others/rensheng.md)
-
+    - [记不住的一些东西](others/to_remember.md)
+    - [常用的开发工具(win)](others/tools.md)
