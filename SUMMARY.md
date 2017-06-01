@@ -15,6 +15,7 @@
     - [JS-day1](js/JAVASCRIPT_DAY1.md)
     - [JS-day2](js/JAVASCRIPT_DAY2.md)
     - [JS-day3](js/JAVASCRIPT_DAY3.md)
+    - [JS-语法参考](js/syntax.md)
 * [html+css](html/h+c.md)
     - [html-day1](html/HTML_DAY1.md)
     - [html-day2](html/HTML_DAY2.md)
