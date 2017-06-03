@@ -1,9 +1,13 @@
 # Summary
 
 * [小航的学习总结](README.md)
-* [sublime text3](st3/st3+.md)
-    - [常用快捷键](st3/shortcuts.md)
-    - [定制自己的编辑器](st3/packages.md)
+* [常用工具](tools/tools.md)
+    - [sublime text3](tools/st3/st3+.md)
+        + [常用快捷键](tools/st3/shortcuts.md)
+        + [定制自己的编辑器](tools/st3/packages.md)
+    - [PHPstorm](tools/phps/phps+.md)
+        + [常用快捷键](tools/phps/shortcuts.md)
+        + [定制自己的编辑器](tools/phps/packages.md)
 * [Linux类](linux/lx+.md)
     - [Linux三日速成](linux/linxx.md)
     - [mysql](linux/mysql.md)
