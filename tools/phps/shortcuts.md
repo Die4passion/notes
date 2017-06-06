@@ -10,7 +10,16 @@
 - `ctrl + z` 撤销
 - `ctrl + shit + z` 反撤销
 - `ctrl + i `  快速生成魔术方法
+- ` ctrl + p ` 显示方法的参数提示
+- ` ctrl +　ｊ`　代码自动提示，自动补全
+- ` ctrl + x` 剪切一行
 - `ctrl + alt + l` 对当前文件代码快速格式化
 - `ctrl + d` 复制当前行
 - `ctrl + y` 删除当前行
 - `alt + j ` 相当于sublime的`ctrl + d`
+- ` F4 ` 或 ` ctrl + b `查找变量来源
+- ` F5 ` 复制当前文件到.指定路径和文件名
+- ` F6 ` 移动当前文件到.指定路径和文件名
+- ` ctrl + n` 查找类
+- ` ctrl + shift + n` 查找文件
+- ` alt + insert ` 代码生成器（构造函数等方法）

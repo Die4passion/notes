@@ -7,7 +7,6 @@
         + [定制自己的编辑器](tools/st3/packages.md)
     - [PHPstorm](tools/phps/phps+.md)
         + [常用快捷键](tools/phps/shortcuts.md)
-        + [定制自己的编辑器](tools/phps/packages.md)
 * [Linux类](linux/lx+.md)
     - [Linux三日速成](linux/linxx.md)
     - [mysql](linux/mysql.md)
