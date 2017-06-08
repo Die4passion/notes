@@ -19,6 +19,8 @@
     - [JS-day2](js/JAVASCRIPT_DAY2.md)
     - [JS-day3](js/JAVASCRIPT_DAY3.md)
     - [JS-语法参考](js/syntax.md)
+* [PHP笔记](php/php+.md)
+    - [函数语法参考](php/phpMyway.md)
 * [html+css](html/h+c.md)
     - [html-day1](html/HTML_DAY1.md)
     - [html-day2](html/HTML_DAY2.md)
