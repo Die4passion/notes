@@ -10,6 +10,7 @@
 - `ctrl + z` 撤销
 - `ctrl + shit + z` 反撤销
 - `ctrl + i `  快速生成魔术方法
+- `ctrl + o `  重写方法
 - ` ctrl + p ` 显示方法的参数提示
 - ` ctrl +　ｊ`　代码自动提示，自动补全
 - ` ctrl + x` 剪切一行
