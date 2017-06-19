@@ -16,7 +16,7 @@
 	- 视图里添加
 
 
-```
+```php
 use yii\web\JsExpression;
 //外部TAG
 echo Html::fileInput('test', NULL, ['id' => 'test']);
@@ -55,7 +55,7 @@ EOF
 
 - 控制器里添加
 
-```
+```php
 use xj\uploadify\UploadAction;
 
 public function actions() {
@@ -110,7 +110,7 @@ public function actions() {
 	- 安装方法同上
 	- 使用方法，在配置main里添加
 
-```
+```php
 'qiniu' => [
 				'class' => \backend\components\Qiniu::className(),
 				'accessKey' => 'WHXsr4075A1KrBf71ihzM4-eeDU-F4PoexU6uBga',
@@ -122,7 +122,7 @@ public function actions() {
 
 - 控制器里在原来的uploadify里修改添加
 
-```
+```php
 'afterSave' => function (UploadAction $action) {
 						$qiniu=\Yii::$app->qiniu;
 						$qiniu->UploadFile($action->getSavePath(),$action->getWebUrl());
@@ -132,7 +132,7 @@ public function actions() {
 
 - 重写一个类
 
-```
+```php
 <?php
 	
 	namespace backend\components;
@@ -476,7 +476,7 @@ public function actions() {
 	- 安装嵌套集合插件`"creocoder/yii2‐nested‐sets": "^0.9.0"`, 方法同上
 	- 使用方法
 
-```
+```php
 use creocoder\nestedsets\NestedSetsQueryBehavior;
 	use yii\db\ActiveQuery;
 	
@@ -495,7 +495,7 @@ use creocoder\nestedsets\NestedSetsQueryBehavior;
 + 使用ztree插件展示商品分类
 	- ztree插件官网 http://www.ztree.me
 
-```
+```php
 echo '<ul id="treeDemo" class="ztree"></ul>';
 $this->registerCssFile('@web/zTree/css/zTreeStyle/zTreeStyle.css');
 	$this->registerJsFile('@web/zTree/js/jquery.ztree.core.js', [ 'depends' => \yii\web\JqueryAsset::className() ]);
@@ -545,7 +545,7 @@ JS
 + 商品相册图片添加,删除和列表展示 
 	- 新增一个数据库，利用uploadify来上传
 
-```
+```php
 视图里：
 <?php
 	use xj\uploadify\Uploadify;
@@ -652,7 +652,7 @@ public function actionLogo($id)
 + 商品列表页可以进行搜索 
 	- 封装一个表单
 
-```
+```php
 namespace backend\models;
 	
 	
@@ -700,7 +700,7 @@ namespace backend\models;
 + 新增商品自动生成sn,规则为年月日+今天的第几个商品,比如2016053000001
 	- 商品保存成功时生成sn
 
-```
+```php
 $goodsSn = GoodsDayCount::findOne([ 'day' => date('Y-m-d') ]);
 //					var_dump($goodsSn);exit;
 				if (!$goodsSn) {
@@ -717,7 +717,7 @@ $goodsSn = GoodsDayCount::findOne([ 'day' => date('Y-m-d') ]);
 + 商品详情使用ueditor文本编辑器 
 	- 安装插件，同上
 
-```
+```php
 视图添加：
 echo $goodsform->field($contents, 'content')->widget('kucha\ueditor\UEditor', []);
 ```
@@ -738,7 +738,7 @@ echo $goodsform->field($contents, 'content')->widget('kucha\ueditor\UEditor', []
 2. 管理员登录和注销 
 	- 调用user实现
 
-```
+```php
 public function actionLogin()
 		{
 			$model = new Auth();
@@ -764,7 +764,7 @@ public function actionLogout()
 	- 添加保存一个	`$this->auth_key = \Yii::$app->security->generateRandomString(32);`
 	- 定义一个public $rememberMe;和实现接口IdentityInterface
 
-```
+```php
  public function getAuthKey()
 		{
 			return $this->auth_key;
@@ -778,7 +778,7 @@ public function validateAuthKey($authKey)
 + 管理员登陆后需要保存最后登录时间和最后登陆ip
 	- 在配置里添加事件或者登陆成功时保存数据
 
-```
+```php
 'on beforeLogin' => function ($event) {
 					$admin = $event->identity;
 					$admin->updated_time = time();
@@ -798,7 +798,7 @@ public function validateAuthKey($authKey)
 	- 角色关联用户
 
 
-```
+```php
 //清除之前数据ID
 $authManger=\Yii::$app->authManager;
 					$authManger->revokeAll($id);
@@ -815,7 +815,7 @@ $authManger=\Yii::$app->authManager;
 
 > 权限增删改查 
 
-```
+```php
 //创建 create 和 view 权限
         $createPermission = $authManager->createPermission('day4/create');
         $viewPermission = $authManager->createPermission('day4/view');
@@ -826,7 +826,7 @@ $authManger=\Yii::$app->authManager;
 
 > 角色增删改查 
 
-```
+```php
 //创建角色 修改角色  删除角色
         $adminRole = $authManager->getRole('admin');//获取已存在的角色
         if($adminRole==null){
@@ -849,7 +849,7 @@ $authManger=\Yii::$app->authManager;
 
 > 角色和权限关联 
 
-```
+```php
  //管理员角色关联create 和 view     普通会员 关联view权限
         $authManager->addChild($adminRole,$createPermission);//角色 权限
         $authManager->addChild($adminRole,$viewPermission);
@@ -859,7 +859,7 @@ $authManger=\Yii::$app->authManager;
 
 - 用户和角色关联 
 
-```
+```php
  //admin用户关联管理员角色  zhangsan用户关联普通会员角色
         $authManager->assign($adminRole,1);
         $authManager->assign($memberRole,2);
@@ -880,7 +880,7 @@ $authManger=\Yii::$app->authManager;
 3. 根据权限显示菜单
 	- 判断这个用户是否有这个权限，有就显示没有就不显示
 
-```
+```php
 if (\Yii::$app->user->isGuest) {
 				$menuItems[] = [ 'label' => '登录', 'url' =>\Yii::$app->user->loginUrl ];
 				
