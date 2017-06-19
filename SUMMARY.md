@@ -35,6 +35,7 @@
 * [日志记录](logs/logs+.md)
     - [项目日志](logs/itsource.md)
     - [项目内容](logs/yii2shop.md)
+    - [YII商城项目](logs/mall_log.md)
 * [面试技巧](interview/interview+.md)
     - [PHP面试攻略](interview/php_interview.md)
 * [杂七杂八](others/78.md)
