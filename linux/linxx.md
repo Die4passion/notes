@@ -1,4 +1,3 @@
-
 # Linux 3日速成 {#home}
 
 >  注：本文linux版本为centos 6.9

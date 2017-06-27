@@ -9,14 +9,12 @@
 * 品牌的增删改查
 	- 简单的增删改查
 * 品牌删除使用逻辑删除 （status=>‐1）
-	- 重新保存数据为-1 sql语句加条件，使其过滤-1，不让其下显示
 * 图片上传使用uploadify插件,上传成功后回显图片 
 	- 安装插件，在composer.josn里的`requir`里添加`"xj/yii2-uploadify-widget": "~2.0.0",`
-	- 在命令行执行composer updated，
+	- 在命令行执行composer update，
 	- 视图里添加
 
-
-```php
+```
 use yii\web\JsExpression;
 //外部TAG
 echo Html::fileInput('test', NULL, ['id' => 'test']);
@@ -55,7 +53,7 @@ EOF
 
 - 控制器里添加
 
-```php
+```
 use xj\uploadify\UploadAction;
 
 public function actions() {
@@ -110,7 +108,7 @@ public function actions() {
 	- 安装方法同上
 	- 使用方法，在配置main里添加
 
-```php
+```
 'qiniu' => [
 				'class' => \backend\components\Qiniu::className(),
 				'accessKey' => 'WHXsr4075A1KrBf71ihzM4-eeDU-F4PoexU6uBga',
@@ -122,7 +120,7 @@ public function actions() {
 
 - 控制器里在原来的uploadify里修改添加
 
-```php
+```
 'afterSave' => function (UploadAction $action) {
 						$qiniu=\Yii::$app->qiniu;
 						$qiniu->UploadFile($action->getSavePath(),$action->getWebUrl());
@@ -130,9 +128,9 @@ public function actions() {
 						$action->output['fileUrl']=$url;
 ```
 
-- 重写一个类
+- 自己写一个组件(因为插件自带的组件不好自定义属性)
 
-```php
+```
 <?php
 	
 	namespace backend\components;
@@ -476,7 +474,7 @@ public function actions() {
 	- 安装嵌套集合插件`"creocoder/yii2‐nested‐sets": "^0.9.0"`, 方法同上
 	- 使用方法
 
-```php
+```
 use creocoder\nestedsets\NestedSetsQueryBehavior;
 	use yii\db\ActiveQuery;
 	
@@ -495,7 +493,7 @@ use creocoder\nestedsets\NestedSetsQueryBehavior;
 + 使用ztree插件展示商品分类
 	- ztree插件官网 http://www.ztree.me
 
-```php
+```
 echo '<ul id="treeDemo" class="ztree"></ul>';
 $this->registerCssFile('@web/zTree/css/zTreeStyle/zTreeStyle.css');
 	$this->registerJsFile('@web/zTree/js/jquery.ztree.core.js', [ 'depends' => \yii\web\JqueryAsset::className() ]);
@@ -545,8 +543,7 @@ JS
 + 商品相册图片添加,删除和列表展示 
 	- 新增一个数据库，利用uploadify来上传
 
-```php
-视图里：
+```
 <?php
 	use xj\uploadify\Uploadify;
 	use yii\bootstrap\Html;
@@ -652,7 +649,7 @@ public function actionLogo($id)
 + 商品列表页可以进行搜索 
 	- 封装一个表单
 
-```php
+```
 namespace backend\models;
 	
 	
@@ -700,7 +697,7 @@ namespace backend\models;
 + 新增商品自动生成sn,规则为年月日+今天的第几个商品,比如2016053000001
 	- 商品保存成功时生成sn
 
-```php
+```
 $goodsSn = GoodsDayCount::findOne([ 'day' => date('Y-m-d') ]);
 //					var_dump($goodsSn);exit;
 				if (!$goodsSn) {
@@ -717,7 +714,7 @@ $goodsSn = GoodsDayCount::findOne([ 'day' => date('Y-m-d') ]);
 + 商品详情使用ueditor文本编辑器 
 	- 安装插件，同上
 
-```php
+```
 视图添加：
 echo $goodsform->field($contents, 'content')->widget('kucha\ueditor\UEditor', []);
 ```
@@ -738,7 +735,7 @@ echo $goodsform->field($contents, 'content')->widget('kucha\ueditor\UEditor', []
 2. 管理员登录和注销 
 	- 调用user实现
 
-```php
+```
 public function actionLogin()
 		{
 			$model = new Auth();
@@ -764,7 +761,7 @@ public function actionLogout()
 	- 添加保存一个	`$this->auth_key = \Yii::$app->security->generateRandomString(32);`
 	- 定义一个public $rememberMe;和实现接口IdentityInterface
 
-```php
+```
  public function getAuthKey()
 		{
 			return $this->auth_key;
@@ -778,7 +775,7 @@ public function validateAuthKey($authKey)
 + 管理员登陆后需要保存最后登录时间和最后登陆ip
 	- 在配置里添加事件或者登陆成功时保存数据
 
-```php
+```
 'on beforeLogin' => function ($event) {
 					$admin = $event->identity;
 					$admin->updated_time = time();
@@ -798,7 +795,7 @@ public function validateAuthKey($authKey)
 	- 角色关联用户
 
 
-```php
+```
 //清除之前数据ID
 $authManger=\Yii::$app->authManager;
 					$authManger->revokeAll($id);
@@ -815,7 +812,7 @@ $authManger=\Yii::$app->authManager;
 
 > 权限增删改查 
 
-```php
+```
 //创建 create 和 view 权限
         $createPermission = $authManager->createPermission('day4/create');
         $viewPermission = $authManager->createPermission('day4/view');
@@ -826,7 +823,7 @@ $authManger=\Yii::$app->authManager;
 
 > 角色增删改查 
 
-```php
+```
 //创建角色 修改角色  删除角色
         $adminRole = $authManager->getRole('admin');//获取已存在的角色
         if($adminRole==null){
@@ -849,7 +846,7 @@ $authManger=\Yii::$app->authManager;
 
 > 角色和权限关联 
 
-```php
+```
  //管理员角色关联create 和 view     普通会员 关联view权限
         $authManager->addChild($adminRole,$createPermission);//角色 权限
         $authManager->addChild($adminRole,$viewPermission);
@@ -859,7 +856,7 @@ $authManger=\Yii::$app->authManager;
 
 - 用户和角色关联 
 
-```php
+```
  //admin用户关联管理员角色  zhangsan用户关联普通会员角色
         $authManager->assign($adminRole,1);
         $authManager->assign($memberRole,2);
@@ -880,7 +877,7 @@ $authManger=\Yii::$app->authManager;
 3. 根据权限显示菜单
 	- 判断这个用户是否有这个权限，有就显示没有就不显示
 
-```php
+```
 if (\Yii::$app->user->isGuest) {
 				$menuItems[] = [ 'label' => '登录', 'url' =>\Yii::$app->user->loginUrl ];
 				
@@ -903,5 +900,449 @@ if (\Yii::$app->user->isGuest) {
 				$menuItems[] = [ 'label' => '注销(' . \Yii::$app->user->identity->username . ')', 'url' =>['admin/logout'] ];
 			}
 ```
+
+---
+
+>####以下是前台模块
+
+### Day9 
+
+#### 用户模块
+
+> 用户注册
+
+1. 用户注册
+1. 用户登录（允许自动登录，登录成功记录最后登录时间和ip）
+	+ 和后台一样，实现接口IdentityInterface
+	+ 登陆成功在beforesave或config/main里面配置事件on beforeLogin
+1. 收货地址管理
+	+ 难点在于三级联动(我用三种方式分别实现了)
+		* 第一种是建一个省市县的数据表，level 字段123分别代表3级，parent_id为0代表省，其余parent_id代表上级的关联数据，然后通过ajax读取数据，并将省市县的id分别保存到address表中。缺点是每次都需要读取数据库，性能不是很好。
+		* 第二种是新建并引入一个保存所有省市县数据的js文件，用原生js代码来实现数据的交互，优点是速度快灵活，缺点是不是很好修改数据，数据表保存省市县的时候保存的是字符串，如果海量数据将会影响数据库性能，不过到时候可以采用分表分区解决这个问题，所以最后我还是选用了这种方法。
+
+> 用到的插件
+
++ 阿里大于
+	* 用来自动发送手机短信
+	* 避免短信被刷：
+		- 一个手机号每天只允许收到3条短信
+		- 短信间隔时间一分钟或更久，阿里大于已经做了
+		- 先通过随机验证码方可发送短信
+	* 网络不好解决方案：
+		- 短时间内第二条短信验证码不变，可设为5分钟以内
+		- 每条短信内容加入一个编号，让用户根据编号输入验证
++ 发送邮件
+
+````php
+    public function actionMail()
+    {
+        //通过邮箱重设密码
+        $result = \Yii::$app->mailer->compose()
+            ->setFrom('18780228768@163.com')//谁的邮箱发出的邮件
+            ->setTo('18780228768@163.com')//发给谁
+            ->setSubject('六月感恩季，七牛献豪礼')//邮件的主题
+            //->setTextBody('Plain text content')//邮件的内容text格式
+            ->setHtmlBody('<b style="color: red">创办于2011年的七牛云，一直聚焦以数据为核心的云服务市场，为企业提供数据存储、CDN加速、富媒体处理、直播云等服务。成立六年来，在绝大多数人的印象中，七牛云这个名词是和技术与服务紧紧相连的。在云服务这个竞争激烈、变化巨大的领域中，七牛云已经成长为国内领先的企业级云服务商，其中为客户称道的无疑是前瞻的技术与用心的服务。<a href="http://www.xxx.com/user/resetpass?token=sdfhkjshdfjsdf1243">点此重设密码</a></b>')//邮件的内容 html格式
+            ->send();
+        var_dump($result);
+    }
+````
+
+### Day10
+
+---
+
+- 首页
+	+ 将前台页面先显示出来
+	+ 将头部顶栏封装到widget
+	+ 将尾部版权封装到widget
+	+ 将尾部帮助列表封装到widget
+	+ 页面都通过widget调用
+- 展示商品分类列表
+	+ 将商品导航列表封装到widget中
+	+ 三次遍历输出3层分类展示到页面
+- 展示商品列表
+	+ 通过嵌套集合插件的方法`children`找到选中分类的所有子分类并将id遍历出来和选中分类的id合并为数组
+	+ 根据id的数组找到所有`good_category_id`等于这个数组的商品
+	+ 面包屑的显示
+		* 通过嵌套集合插件的方法`parents` 找到选中分类的所有上级分类id并和选中分类id合并为数组
+		* 然后循环遍历显示即可
+- 商品详情
+- 展示商品详情
+
+````php
+//商品列表页
+    public function actionList($id)
+    {
+        $ids[] = $id;
+        $ids2[] = $id;
+        $goods_category = GoodsCategory::findOne(['id' => $id]);
+        $children = $goods_category->children()->all();
+        //找出所有下级分类的id
+        foreach ($children as $child) {
+            $ids[] = $child->id;
+        }
+        $models = Goods::findAll(['goods_category_id' => $ids]);
+        //找到当前分类的所有上级分类
+        $parents = $goods_category->parents()->all();
+        foreach ($parents as $parent) {
+            $ids2[] = $parent->id;
+        }
+        $categories = GoodsCategory::findAll(['id' => $ids2]);
+        return $this->render('list', ['models' => $models, 'categories' => $categories]);
+    }
+
+    //商品详情页
+    public function actionGoods($id)
+    {
+        $model = Goods::findOne(['id' => $id]);
+        $goods_category = GoodsCategory::findOne(['id' => $model->goods_category_id]);
+        $ids[] = $model->goods_category_id;
+        $parents = $goods_category->parents()->all();
+        foreach ($parents as $parent) {
+            $ids[] = $parent->id;
+        }
+        $categories = GoodsCategory::findAll(['id' => $ids]);
+        return $this->render('goods', ['model' => $model, 'categories' => $categories]);
+    }
+````
+
+### Day11
+
+---
+
+- 购物车设计
+- 参照主流的购物车设计方案(京东),完成购物车的数据存放方式的设计
+- 如果没有登录就存放在cookie中
+- 如果已经登录,就存放在数据表中
+- 当用户登录的时候,将cookie中的数据自动同步到数据表中
+- 如果已经有了这个商品,就使用cookie中的数量
+- 如果没有这个商品,就添加这个商品到数据表
+
+- 难点在于控制器的流程
+	- 如果未登陆将数据保存到cookie
+	- 如果用户已经登陆
+		+ 如果cookie中有数据，将数据和用户登陆后的数据合并保存到数据表，然后清除cookie
+		+ 如果cookie中没用数据，直接保存到数据表
+	- 读取数据的时候
+		+ 如果未登陆，直接读取cookie中的数据
+		+ 如果已登录，读取数据表中的数据
+
+>直接上控制器中的代码以作参考:
+
+````php
+  //加入购物车
+    public function actionAddCart()
+    {
+        //改变数据
+        self::changeCart();
+        //将当前地址get传过去
+        $name = \Yii::$app->request->post('name');
+        $name = urlencode($name);
+        //跳转到购物车页面
+        return $this->redirect(['index/cart?name=' . $name]);
+    }
+
+    //更新购物车
+    public function actionUpdateCart()
+    {
+        $this->update = true;
+        self::changeCart();
+    }
+
+    //购物车页面
+    public function actionCart()
+    {
+        if (\Yii::$app->user->isGuest) {
+            //取出cookie中的商品id和数量
+            $cookies = \Yii::$app->request->cookies;
+            $cookie = $cookies->get('cart');
+            if ($cookie == null) {
+                $cart = [];
+            } else {
+                $cart = unserialize($cookie->value);
+            }
+            $models = [];
+            foreach ($cart as $goods_id => $amount) {
+                $goods = Goods::findOne(['id' => $goods_id])->attributes;
+                $goods['amount'] = $amount;
+                $models[] = $goods;
+            }
+        } else {
+            //先将缓存同步到数据库
+            self::cookie2data();
+            $models = self::getCarts();
+        }
+        $name = \Yii::$app->request->get('name');
+        return $this->render('cart', ['models' => $models, 'name' => $name]);
+    }
+
+    //购物车回退
+    public function actionBack2Goods()
+    {
+        $name = \Yii::$app->request->get('name');
+        //跳到上一个页面
+        if ($name) {
+            return $this->redirect($name);
+        }
+        return $this->redirect(\Yii::$app->request->getReferrer());
+    }
+
+    //将购物车cookie同步到数据表
+    private function cookie2data()
+    {
+        //获取cookie中的购物车数据
+        $cookies = \Yii::$app->request->cookies;
+        $cookie = $cookies->get('cart');
+        $member_id = \Yii::$app->user->getId();
+        //将所有的缓存读出来，分别判断数据表是否有值，有则合并到数据表，没有则新增到数据表
+        if ($cookie) {
+            $cart = unserialize($cookie->value);
+            foreach ($cart as $goods_id => $amount) {
+                $old_cart = Cart::findOne(['member_id' => $member_id, 'goods_id' => $goods_id]);
+                if ($old_cart != null) {
+                    $old_cart->amount += $amount;
+                    $old_cart->save();
+                } else {
+                    $model = new Cart();
+                    $model->setAttributes(['member_id' => $member_id, 'goods_id' => $goods_id, 'amount' => $amount]);
+                    $model->save();
+                }
+            }
+        }
+        //清空cookie
+        $cookie = new Cookie([
+            'name' => 'cart',
+            'value' => '',
+            'expire' => time() - 1,
+        ]);
+        \Yii::$app->response->cookies->add($cookie);
+    }
+
+    //更新购物车的方法
+    private function changeCart()
+    {
+        //接收数据
+        $goods_id = \Yii::$app->request->post('goods_id');
+        $amount = \Yii::$app->request->post('amount');
+        $goods = Goods::findOne(['id' => $goods_id]);
+        //如果商品不存在，提示错误信息
+        if ($goods == null) {
+            throw new NotFoundHttpException('商品不存在');
+        }
+        //如果未登陆 保存到cookie
+        if (\Yii::$app->user->isGuest) {
+            //获取cookie中的购物车数据
+            $cookies = \Yii::$app->request->cookies;
+            $cookie = $cookies->get('cart');
+            //如果cookie中没用数据，定义为空数组
+            if ($cookie == null) {
+                $cart = [];
+            } else {
+                $cart = unserialize($cookie->value);
+            }
+            //将商品id和数量保存到cookie
+            $cookies = \Yii::$app->response->cookies;
+            //更新
+            if ($this->update) {
+                //如果不是0这直接改为这个数，如果小于0这删掉这一条
+                if ($amount > 0) {
+                    $cart[$goods_id] = $amount;
+                } else {
+                    if (key_exists($goods['id'], $cart)) unset($cart[$goods_id]);
+                }
+                //修改
+            } else {
+                //检查购物车中是否有该商品，有则累加
+                if (key_exists($goods->id, $cart)) {
+                    $cart[$goods_id] += $amount;
+                } else {
+                    $cart[$goods_id] = $amount;
+                }
+            }
+            //保存到cookie
+            $cookie = new Cookie([
+                'name' => 'cart',
+                'value' => serialize($cart),
+                'expire' => time() + 24 * 3600,
+            ]);
+            $cookies->add($cookie);
+            //如果登陆 保存到数据表
+        } else {
+            //登陆先查cookie里是否有商品
+            //没有直接保存到数据库
+            $member_id = \Yii::$app->user->getId();
+            //判断数据库是否已经有这个商品和对应的memberid数据
+            $old_cart = Cart::findOne(['member_id' => $member_id, 'goods_id' => $goods_id]);
+            //如果是更新直接修改，如果amount 小于 0 直接删除
+            if ($this->update) {
+                if ($old_cart == null) {
+                    throw new NotFoundHttpException('你的购物车还没有该商品');
+                }
+                if ($amount > 0) {
+                    $old_cart->amount = $amount;
+                    $old_cart->save();
+                } else {
+                    $old_cart->delete();
+                }
+            } else {
+                //如果有则加上之前的数据
+                if ($old_cart != null) {
+                    $old_cart->amount += $amount;
+                    $old_cart->save();
+                } else {
+                    //其他情况直接保存这条数据
+                    $model = new Cart();
+                    $model->setAttributes(['member_id' => $member_id, 'goods_id' => $goods_id, 'amount' => $amount]);
+                    $model->save();
+                }
+            }
+            self::cookie2data();
+        }
+    }
+
+    //找到用户所有购物车的方法
+    private function getCarts()
+    {
+        //定义一个空数组接收数据
+        $models = [];
+        //找到该用户所有的商品
+        $member_id = \Yii::$app->user->getId();
+        $carts = Cart::find()->where(['member_id' => $member_id])->andWhere(['>', 'amount', 0])->all();
+        //将所有的购物车数据遍历出来并保存到数组里
+        foreach ($carts as $cart) {
+            $goods = Goods::findOne(['id' => $cart->goods_id])->attributes;
+            $goods['amount'] = $cart->amount;
+            $models[] = $goods;
+        }
+        return $models;
+    }
+````
+
+### Day12 订单
+
+- 在提交订单的时候:
+- 判断库存是否足够
+- 如果不够回滚
+- 如果足够执行后续流程
+- 执行成功清除购物车
+- 晚上7组讲解模块内容
+
+>控制器中代码如下，主要用的技术是数据库的回滚，但是必须数据表的类型要支持事务，如innodb
+
+````php
+ //将购物车加入订单
+    public function actionOrder()
+    {
+        //未登录跳到登陆页面
+        if (\Yii::$app->user->isGuest) {
+            return $this->redirect(['user/login', 'name' => \Yii::$app->request->getUrl()]);
+        } else {
+            $member_id = \Yii::$app->user->getId();
+            //找到所有收货地址
+            $addresses = Address::find()->where(['member_id' => $member_id])->asArray()->all();
+            //找到所有购物车
+            $carts = self::getCarts();
+            //如果没有购物车跳转到首页
+            if ($carts == null) {
+                return $this->goHome();
+            }
+            return $this->render('order', ['addresses' => $addresses, 'carts' => $carts]);
+        }
+    }
+
+    //订单提交
+    public function actionPayment()
+    {
+        if (\Yii::$app->request->isPost) {
+            $address_id = \Yii::$app->request->post('address_id');
+            $payment_id = \Yii::$app->request->post('payment_id');
+            $delivery_id = \Yii::$app->request->post('delivery_id');
+            $price = \Yii::$app->request->post('price');
+            $member_id = \Yii::$app->user->getId();
+            //找到所有地址
+            $address = Address::findOne(['id' => $address_id, 'member_id' => $member_id]);
+            if ($address == null) {
+                throw new NotFoundHttpException('地址不存在,请添加地址');
+            }
+            $order = new Order();
+            //字段赋值
+            $order->member_id = $member_id;
+            $order->name = $address->name;
+            $order->province = $address->province;
+            $order->city = $address->city;
+            $order->area = $address->area;
+            $order->address = $address->address;
+            $order->tel = $address->tel;
+            $order->delivery_id = $delivery_id;
+            $order->delivery_name = Order::$delivery_style[$delivery_id]['name'];
+            $order->delivery_price = Order::$delivery_style[$delivery_id]['price'];
+            $order->payment_id = $payment_id;
+            $order->payment_name = Order::$payment_style[$payment_id]['name'];
+            $order->total = $price;
+            //开启事务
+            $transaction = \Yii::$app->db->beginTransaction();
+            try {
+                $order->save();
+                //订单商品详情表
+                $carts = Cart::findAll(['member_id' => $member_id]);
+                foreach ($carts as $cart) {
+                    $goods = Goods::findOne(['id' => $cart->goods_id, 'status' => 1]);
+                    //商品没有了，抛出异常
+                    if ($goods == null) {
+                        throw new Exception($goods->name . '--已售完');
+                    }
+                    //库存不足抛出异常
+                    if ($goods->stock < $cart->amount) {
+                        throw new Exception($goods->name . '--库存不足');
+                    }
+                    //构造生成订单详情表
+                    $order_goods = new OrderGoods();
+                    $order_goods->member_id = $member_id;
+                    $order_goods->order_id = $order->id;
+                    $order_goods->goods_id = $cart->goods_id;
+                    $order_goods->goods_name = $goods->name;
+                    $order_goods->logo = $goods->logo;
+                    $order_goods->price = $goods->shop_price;
+                    $order_goods->amount = $cart->amount;
+                    $order_goods->total = $order_goods->amount * $order_goods->price;
+                    //保存订单详情表
+                    $order_goods->save();
+                    $goods->stock -= $cart->amount;
+                    $goods->save();
+                }
+                //清空购物车
+                Cart::deleteAll(['member_id' => $member_id]);
+                //一切正常，事务提交
+                $transaction->commit();
+            } catch (Exception $e) {
+                //回滚
+                $transaction->rollBack();
+            }
+            return $order->id;
+        }
+        return null;
+    }
+
+    //提交成功页面
+    public function actionOrderSave()
+    {
+        return $this->render('order-success');
+    }
+
+    //订单状态页面
+    public function actionOrderStatus()
+    {
+        //显示该用户的所有订单
+        $member_id = \Yii::$app->user->getId();
+        $orders = OrderGoods::findAll(['member_id' => $member_id]);
+        return $this->render('order-status', ['orders' => $orders]);
+    }
+````
+
+
+
+
+
 
 > 更多功能和bug修复我会及时更新~
