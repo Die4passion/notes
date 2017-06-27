@@ -11,7 +11,7 @@
         "-sharing",
         "prism-themes",
         "toggle-chapters",
-        "editlink",
+        "editlink"
     ],
     "pluginsConfig": {
         "github": {
@@ -23,9 +23,8 @@
             ]
         },
         "editlink": {
-        	"base": "https://github.com/Die4passion/notes/blob/master/",
-        	"label": "Edit"
+            "base": "https://github.com/Die4passion/notes/blob/master/",
+            "label": "Edit"
         }
-
     }
 }
