@@ -620,7 +620,7 @@ DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
      * 如有不解之处 或 错误的地方
      * 请q 465335731联系我
      * 
-     *      write by  PHP0217   杨航
+     *      write by  Die4passion   杨航
      */
     defined('PHP_IS_EASY') or define('PHP_IS_EASY', 'php是世界上最好的语言');
     for ($i=1; $i < 100000; $i++) { 
