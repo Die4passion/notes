@@ -15,4 +15,5 @@
 - xshell  远程操作服务器
 - listary  windows便捷启动工具
 - shadowsocks  不能说
-- 
+- caret   炫酷文本编辑器(md)
+- yu writer    md编辑器
