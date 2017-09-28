@@ -111,3 +111,95 @@
 2. 如果推送失败，则因为远程分支比你的本地新一些，需要先用git pull试图合并
 3. 如果合并有冲突，则解决冲突，并在本地提交
 4. 没有冲突或解决冲突后，再用git push origin branch-name推送
+
+
+
+>查看命令: 
+
+````
+# 显示commit历史，以及每次commit发生变更的文件
+$ git log --stat
+
+# 搜索提交历史，根据关键词 （keyword是文件名，不必完全匹配）
+$ git log -S [keyword]
+
+# 显示某个commit之后的所有变动，每个commit占据一行
+$ git log [tag] HEAD --pretty=format:%s
+# 类似于 只是少了版本号
+$ git log --pretty=oneline
+$ git log --pretty --oneline
+
+# 显示某个commit之后的所有变动，其"提交说明"必须符合搜索条件 
+# feature 是commit信息里的内容
+$ git log [tag] HEAD --grep feature
+
+# 显示某个文件的版本历史，包括文件改名
+$ git log --follow [file]
+$ git whatchanged [file]
+
+# 显示指定文件相关的每一次diff (好像比git diff方便)
+$ git log -p [file]
+
+# 显示过去n次提交
+$ git log -n --pretty --oneline
+
+# 查看远程分支合并图
+$ git log --graph
+$ git log --graph --pretty --oneline --abbrev-commit
+
+$ git stash             //保存当前工作现场
+$ git stash drop        //删除保存
+$ git stash apply       //恢复现场，但并不删除保存
+$ git stash pop         //恢复现场，并删除保存
+$ git stash list        //查看保存工作情况
+
+# 显示所有提交过的用户，按提交次数排序
+$ git shortlog -sn
+
+# 显示指定文件是什么人什么时间修改过的
+$ git blame [file]
+
+# 显示暂存区和工作区的差异
+$ git diff
+
+# 显示暂存区和上一个commit之间的差异
+$ git diff --cached [file]
+
+# 显示工作区与当前分支最新commit之间的差异
+$ git diff HEAD
+
+# 显示两个版本之间的差异 可以只写一个版本 和本地版本比较
+$ git diff [first-branch] [second-branch]
+
+# 显示你写了多少行代码
+$ git diff --shortstat "@{0 day ago}"     //今天
+$ git diff --shortstat "@{1 day ago}"     //昨天和今天
+$ git diff --shortstat "@{1 month ago}"   //这个月
+
+# 显示当前分支最近的几次提交
+$ git  reflog
+
+````
+
+> 操作命令
+
+````
+# 下载远程仓库的所有变动
+$ git fetch [remote]
+
+# 显示所有远程仓库
+$ git remote -v
+
+# 增加一个新的远程仓库， 并命名
+$ git remote add [shortname] [url]
+
+# 删除远程仓库
+$ git remote rm [shortname]
+
+# 恢复暂存区的所有文件到工作区
+$ git checkout .
+
+# 重置暂存区与工作区，与上一次commit保持一致
+$ git reset --hard
+
+````
