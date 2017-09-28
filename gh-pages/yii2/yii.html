@@ -1,0 +1,924 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Yii常用语法 · 小航的学习总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="Die4passion">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-ghcolors.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../logs/logs+.html" />
+    
+    
+    <link rel="prev" href="yii+.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    小航的学习总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../tools/tools.html">
+            
+                <a href="../tools/tools.html">
+            
+                    
+                    常用工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../tools/st3/st3+.html">
+            
+                <a href="../tools/st3/st3+.html">
+            
+                    
+                    sublime text3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../tools/st3/shortcuts.html">
+            
+                <a href="../tools/st3/shortcuts.html">
+            
+                    
+                    常用快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../tools/st3/packages.html">
+            
+                <a href="../tools/st3/packages.html">
+            
+                    
+                    定制自己的编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../tools/phps/phps+.html">
+            
+                <a href="../tools/phps/phps+.html">
+            
+                    
+                    PHPstorm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../tools/phps/shortcuts.html">
+            
+                <a href="../tools/phps/shortcuts.html">
+            
+                    
+                    常用快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../linux/lx+.html">
+            
+                <a href="../linux/lx+.html">
+            
+                    
+                    Linux类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../linux/linxx.html">
+            
+                <a href="../linux/linxx.html">
+            
+                    
+                    Linux三日速成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../linux/limax.html">
+            
+                <a href="../linux/limax.html">
+            
+                    
+                    Linux进阶加强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../linux/unix_philosophy.html">
+            
+                <a href="../linux/unix_philosophy.html">
+            
+                    
+                    Unix哲学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../linux/mysql.html">
+            
+                <a href="../linux/mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../linux/regular.html">
+            
+                <a href="../linux/regular.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../linux/Redis.html">
+            
+                <a href="../linux/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../linux/youhua.html">
+            
+                <a href="../linux/youhua.html">
+            
+                    
+                    大型网站优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../git/git-bash.html">
+            
+                <a href="../git/git-bash.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../js/js+.html">
+            
+                <a href="../js/js+.html">
+            
+                    
+                    JS笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../js/JAVASCRIPT_DAY1.html">
+            
+                <a href="../js/JAVASCRIPT_DAY1.html">
+            
+                    
+                    JS-day1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../js/JAVASCRIPT_DAY2.html">
+            
+                <a href="../js/JAVASCRIPT_DAY2.html">
+            
+                    
+                    JS-day2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../js/JAVASCRIPT_DAY3.html">
+            
+                <a href="../js/JAVASCRIPT_DAY3.html">
+            
+                    
+                    JS-day3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../js/syntax.html">
+            
+                <a href="../js/syntax.html">
+            
+                    
+                    JS-语法参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../php/php+.html">
+            
+                <a href="../php/php+.html">
+            
+                    
+                    PHP笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../php/phpMyway.html">
+            
+                <a href="../php/phpMyway.html">
+            
+                    
+                    函数语法参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../html/h+c.html">
+            
+                <a href="../html/h+c.html">
+            
+                    
+                    html+css
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../html/HTML_DAY1.html">
+            
+                <a href="../html/HTML_DAY1.html">
+            
+                    
+                    html-day1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../html/HTML_DAY2.html">
+            
+                <a href="../html/HTML_DAY2.html">
+            
+                    
+                    html-day2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../html/HTML_DAY3.html">
+            
+                <a href="../html/HTML_DAY3.html">
+            
+                    
+                    html-day3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../html/CSS_DAY1.html">
+            
+                <a href="../html/CSS_DAY1.html">
+            
+                    
+                    css-day1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../html/CSS_DAY2.html">
+            
+                <a href="../html/CSS_DAY2.html">
+            
+                    
+                    css-day2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../html/CSS_DAY3.html">
+            
+                <a href="../html/CSS_DAY3.html">
+            
+                    
+                    css-day3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="yii+.html">
+            
+                <a href="yii+.html">
+            
+                    
+                    Yii笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.8.1" data-path="yii.html">
+            
+                <a href="yii.html">
+            
+                    
+                    Yii常用语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../logs/logs+.html">
+            
+                <a href="../logs/logs+.html">
+            
+                    
+                    日志记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../logs/itsource.html">
+            
+                <a href="../logs/itsource.html">
+            
+                    
+                    项目日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../logs/yii2shop.html">
+            
+                <a href="../logs/yii2shop.html">
+            
+                    
+                    项目内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../logs/mall_log.html">
+            
+                <a href="../logs/mall_log.html">
+            
+                    
+                    YII商城项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../interview/interview+.html">
+            
+                <a href="../interview/interview+.html">
+            
+                    
+                    面试技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../interview/php_interview.html">
+            
+                <a href="../interview/php_interview.html">
+            
+                    
+                    PHP面试攻略
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../others/78.html">
+            
+                <a href="../others/78.html">
+            
+                    
+                    杂七杂八
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../others/funny.html">
+            
+                <a href="../others/funny.html">
+            
+                    
+                    心灵鸡汤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../others/rensheng.html">
+            
+                <a href="../others/rensheng.html">
+            
+                    
+                    程序算法与人生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../others/to_remember.html">
+            
+                <a href="../others/to_remember.html">
+            
+                    
+                    记不住的一些东西
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../others/tools.html">
+            
+                <a href="../others/tools.html">
+            
+                    
+                    常用的开发工具(win)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Yii常用语法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="yii2-&#x5E38;&#x7528;&#x8BED;&#x6CD5;">Yii2 &#x5E38;&#x7528;&#x8BED;&#x6CD5;</h3>
+<ul>
+<li><p>&#x63A7;&#x5236;&#x5668;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5728;<code>controllers</code>&#x76EE;&#x5F55;&#x4E0B;&#x9762;</li>
+<li>&#x6587;&#x4EF6;&#x540D;<code>XxxController.php</code> &#x5927;&#x9A7C;&#x5CF0;</li>
+<li>&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5FC5;&#x987B;&#x548C;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;<code>namespace fronted\controllers</code></li>
+<li>&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x540D;&#x5FC5;&#x987B;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x4E00;&#x81F4;</li>
+<li>web&#x5E94;&#x7528;&#x7684;&#x63A7;&#x5236;&#x5668;&#x5FC5;&#x987B;&#x7EE7;&#x627F; <code>yii\web\Controller</code></li>
+</ul>
+</li>
+<li><p>&#x64CD;&#x4F5C;</p>
+<ul>
+<li>&#x5FC5;&#x987B;&#x662F;<code>public function</code></li>
+<li><code>actionXxx()</code> &#x5FC5;&#x987B;&#x4EE5;<code>action</code>&#x5F00;&#x5934; &#x5C0F;&#x9A7C;&#x5CF0;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE; <code>r=&#x63A7;&#x5236;&#x5668;&#x540D;/&#x64CD;&#x4F5C;&#x540D;</code> &#x90FD;&#x662F;&#x5C0F;&#x5199;</li>
+<li>&#x9009;&#x62E9;&#x89C6;&#x56FE;&#x5E76;&#x5206;&#x914D;&#x6570;&#x636E;<code>return $this-&gt;render(&apos;&#x89C6;&#x56FE;&#x540D;&apos;,[key=&gt;&#x53D8;&#x91CF;])</code></li>
+</ul>
+</li>
+<li><p>&#x89C6;&#x56FE;</p>
+<ul>
+<li>&#x5B58;&#x653E;&#x5230;<code>views</code>&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#xFF0C;&#x4EE5;&#x63A7;&#x5236;&#x5668;&#x547D;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x91CC;</li>
+<li>&#x89C6;&#x56FE;&#x6587;&#x4EF6;&#x4EE5;<code>.php</code>&#x7ED3;&#x5C3E;</li>
+</ul>
+</li>
+<li><p>&#x8868;&#x5355;&#x6A21;&#x578B;</p>
+<ul>
+<li>&#x5B58;&#x653E;&#x5230;<code>models</code>&#x76EE;&#x5F55;&#x4E0B;</li>
+<li>&#x6587;&#x4EF6;&#x540D; <code>XxxForm.php</code></li>
+<li>&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5FC5;&#x987B;&#x548C;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;<code>namespace fronted\models</code></li>
+<li>&#x7C7B;&#x540D;&#x5FC5;&#x987B;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x4E00;&#x81F4;</li>
+<li>&#x8868;&#x5355;&#x6A21;&#x578B;&#x7C7B;&#x5FC5;&#x987B;&#x7EE7;&#x627F;<code>yii\base\Model</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;&#x64CD;&#x4F5C;">&#x4F7F;&#x7528;&#x64CD;&#x4F5C;</h3>
+<ul>
+<li><p>&#x6DFB;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;</p>
+<ul>
+<li>&#x5728;&#x6A21;&#x578B;&#x6DFB;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;&#x5B57;&#x6BB5;. <code>public $captcha</code></li>
+<li>&#x6DFB;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;&#x89C4;&#x5219; <code>[&apos;code&apos;, &apos;captcha&apos;]</code></li>
+<li>&#x5728;&#x8868;&#x5355;&#x4E2D;&#x4F7F;&#x7528;&#x9A8C;&#x8BC1;&#x7801; <code>$form-&gt;field($model, &apos;code&apos;)-&gt;widget(\yii\captcha\Captcha::className();</code></li>
+<li>&#x5728;&#x63A7;&#x5236;&#x5668;&#x914D;&#x7F6E;&#x9A8C;&#x8BC1;&#x7801;(&#x53EF;&#x9009;)</li>
+</ul>
+</li>
+<li><p>&#x56FE;&#x7247;&#x4E0A;&#x4F20;</p>
+<ul>
+<li>&#x6A21;&#x578B;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#x5B57;&#x6BB5; <code>public $imgFlile</code></li>
+<li>&#x6DFB;&#x52A0;&#x9A8C;&#x8BC1;&#x89C4;&#x5219; <code>[&apos;imgFile&apos;, &apos;file&apos;, &apos;extensions&apos;=&gt;[&apos;jpg&apos;, &apos;png&apos;, &apos;gif&apos;],&apos;skipOnEmpty&apos; =&gt; false],</code></li>
+<li>&#x5728;&#x8868;&#x5355;&#x4E2D;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6846; <code>echo $form-&gt;field($model, &apos;imgFile&apos;)-&gt;fileInput();</code></li>
+<li>&#x63A7;&#x5236;&#x5668;<ul>
+<li>&#x5728;&#x6570;&#x636E;&#x9A8C;&#x8BC1;&#x4E4B;&#x524D;&#xFF0C;&#x5B9E;&#x4F8B;&#x5316;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5BF9;&#x8C61;<code>$model-&gt;imgFile = UploadedFile::getInstance($model,&apos;imgFile&apos;);</code></li>
+<li>&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x4E4B;&#x524D;<ul>
+<li>&#x4FDD;&#x5B58;&#x56FE;&#x7247; <code>$model-&gt;imgFile-&gt;saveAs()</code></li>
+<li>&#x56FE;&#x7247;&#x5730;&#x5740;&#x8D4B;&#x503C; <code>$model-&gt;img = $fileName;</code></li>
+<li>&#x4FDD;&#x5B58;&#x6A21;&#x578B; <code>$model-&gt;save();</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="yii+.html" class="navigation navigation-prev " aria-label="Previous page: Yii笔记">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../logs/logs+.html" class="navigation navigation-next " aria-label="Next page: 日志记录">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Yii常用语法","level":"1.8.1","depth":2,"next":{"title":"日志记录","level":"1.9","depth":1,"path":"logs/logs+.md","ref":"logs/logs+.md","articles":[{"title":"项目日志","level":"1.9.1","depth":2,"path":"logs/itsource.md","ref":"logs/itsource.md","articles":[]},{"title":"项目内容","level":"1.9.2","depth":2,"path":"logs/yii2shop.md","ref":"logs/yii2shop.md","articles":[]},{"title":"YII商城项目","level":"1.9.3","depth":2,"path":"logs/mall_log.md","ref":"logs/mall_log.md","articles":[]}]},"previous":{"title":"Yii笔记","level":"1.8","depth":1,"path":"yii2/yii+.md","ref":"yii2/yii+.md","articles":[{"title":"Yii常用语法","level":"1.8.1","depth":2,"path":"yii2/yii.md","ref":"yii2/yii.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","prism","splitter","-highlight","-sharing","prism-themes","toggle-chapters","editlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/Die4passion"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/Die4passion/notes/tree/master/content/"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Die4passion","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"小航的学习总结","language":"zh","gitbook":"*","description":"一个注定不平凡的程序员"},"file":{"path":"yii2/yii.md","mtime":"2017-09-28T01:57:36.256Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-28T02:01:13.623Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
