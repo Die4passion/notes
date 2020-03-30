@@ -4,5 +4,7 @@
 
 > 个人随笔博客，技术和生活.
 
+Trying is the 1st step towards failure...
+
 [GitHub](https://github.com/die4passion)
-[Get Started](#quick-start)
+[Get Started](README.md)
