@@ -29,7 +29,6 @@
 
 
 - [屈子投江](qz/index.md)
-  - [2018年工作总结](qz/fuxk/aite+guse.md)
 
 
 
