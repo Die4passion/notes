@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Die4pssion's Blog - A Blog about Code and Life.</title>
   <link rel="icon" href="assets/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="A blog about code and life.">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css"> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500|Source+Sans+Pro:400,400i,600" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <!--评论 -->
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <!-- <link rel="stylesheet" href="assets/css/main-custom.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/button-custom.css"> -->
+  <!-- <link rel="stylesheet" href="assets/styles.css"> -->
+
 <body>
   <div id="app">道路虽被淹没，但 向下就是天空...</div>
+  <div id="gitalk-container"></div>
+    <!-- 评论 -->
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
   <script>
     window.$docsify = {
-      name: '<img src="assets/logo.png" data-origin="assets/logo.png" alt="logo" class="sidebar-logo">I think not',
+      // name: '<img src="assets/logo.png" data-origin="assets/logo.png" alt="logo" class="sidebar-logo">I think not',
       //name: '小航的博客',
       repo: 'https://github.com/Die4passion',
       coverpage: true,
       loadSidebar: true,
-      auto2top:true,
+      auto2top: true,
       autoHeader: false,
-     // loadNavbar: true,
+      // loadNavbar: true,
       mergeNavbar: true,
       maxLevel: 5,
       subMaxLevel: 5,
@@ -43,13 +55,24 @@
       //externalLinkTarget: '_self',
       // 分页
     }
+    var gitalk = new Gitalk({
+      clientID: '31f1d7ca414b5627ed0c',
+      clientSecret: '4c949459ac60c2f1f68e42a8887b1f510569a81e',
+      repo: 'notes',
+      owner: 'Die4passion',
+      admin: ['Die4passion'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  
+
   <!-- 菜单收起 -->
   <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js">
-  
-  <!-- 代码高亮 -->  
+
+  < !--代码高亮 -->
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-scss.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
@@ -63,10 +86,12 @@
   <script src="//unpkg.com/prismjs/components/prism-rust.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-haskell.min.js"></script>
 
+  <!-- 主题 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
   <script src="//unpkg.com/docsify-copy-code"></script>
-
 </body>
 </html>
