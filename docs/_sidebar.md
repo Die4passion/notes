@@ -7,6 +7,7 @@
       - [ops-school笔记](/pd/linux/ops.md)
       - [shell相关](/pd/linux/shell.md)
       - [linux命令速查](/pd/linux/linux_quick.md)
+      - [如何书写shell脚本](/pd/linux/how_to_shell.md)
    - php
       - [some functions](/pd/php/function.md)
    - js
@@ -26,6 +27,8 @@
 - [伯牙绝弦](/by/)
 
 - [屈子投江](/qz/)
+  - 个人感悟
+      - [于2018年下](/qz/fuxk/aite+guse.md)
 
 - [Die4passion](/die/)
   
