@@ -27,8 +27,9 @@
 - [伯牙绝弦](/by/)
 
 - [屈子投江](/qz/)
-  - 个人感悟
-      - [于2018年下](/qz/fuxk/aite+guse.md)
+  
+   - 个人感悟
+      - [于2018年下](/qz/fuxk/hide.md)
 
 - [Die4passion](/die/)
   
