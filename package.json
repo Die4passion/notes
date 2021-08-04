@@ -18,5 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^1.0.0"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4"
   }
 }
