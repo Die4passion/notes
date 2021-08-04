@@ -21,3 +21,14 @@
 
 `test: add unit test for user login function`
 - `chore` 构建过程或辅助工具的变动
+
+!> 安装`Commitizen` 就好
+
+```bash
+
+npm i commitizen -g
+
+npx commitizen init cz-conventional-changelog --save-dev --save-exact
+
+
+```
