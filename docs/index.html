@@ -12,18 +12,19 @@
   <!-- <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css"> -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"> -->
   <link rel="stylesheet" href="assets/css/docsify-darklight-theme.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500|Source+Sans+Pro:400,400i,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500|Source+Sans+Pro:400,400i,600"
+    rel="stylesheet">
   <!--评论 -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/main-custom.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/button-custom.css"> -->
   <link rel="stylesheet" href="assets/styles.css">
 
-<body>
+<body class="close">
   <div id="app">道路虽被淹没，但 向下就是天空...</div>
   <!-- <div id="gitalk-container"></div> -->
-    <!-- 评论 -->
-    <!-- <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
+  <!-- 评论 -->
+  <!-- <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
   <script>
     window.$docsify = {
       name: '<img src="assets/logo.png" data-origin="assets/logo.png" alt="logo" class="sidebar-logo">I think not',
@@ -55,20 +56,29 @@
       },
       //externalLinkTarget: '_self',
       // 分页
+      pagination: {
+        previousText: 'Prev 上篇',
+        nextText: 'Next 下篇',
+        crossChapter: true,
+        crossChapterText: true,
+      },
     }
 /*     var gitalk = new Gitalk({
-      clientID: '31f1d7ca414b5627ed0c',
-      clientSecret: '4c949459ac60c2f1f68e42a8887b1f510569a81e',
-      repo: 'notes',
-      owner: 'Die4passion',
-      admin: ['Die4passion'],
-      // id: location.pathname,      // Ensure uniqueness and length less than 50
-      distractionFreeMode: false  // Facebook-like distraction free mode
-    })
-
-    gitalk.render('gitalk-container') */
+          clientID: '31f1d7ca414b5627ed0c',
+          clientSecret: '4c949459ac60c2f1f68e42a8887b1f510569a81e',
+          repo: 'notes',
+          owner: 'Die4passion',
+          admin: ['Die4passion'],
+          // id: location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+    
+        gitalk.render('gitalk-container') */
   </script>
   <script src="assets/scripts/docsify.min.js"></script>
+
+  <!-- 分页导航 -->
+  <script src="assets/scripts/docsify-pagination.min.js"></script>
 
   <!-- 菜单收起 -->
   <script src="assets/scripts/docsify-sidebar-collapse.min.js"></script>
@@ -95,4 +105,5 @@
   <script src="assets/scripts/emoji.min.js"></script>
   <script src="assets/scripts/docsify-copy-code.min.js"></script>
 </body>
+
 </html>
