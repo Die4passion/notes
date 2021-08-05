@@ -26,9 +26,15 @@
 
 ```bash
 
-npm i commitizen -g
+npm i -g commitizen
+npm i -g cz-conventional-changelog
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
-npx commitizen init cz-conventional-changelog --save-dev --save-exact
 
+# 然后只需要
+
+git cz
+
+# 代替commit
 
 ```
