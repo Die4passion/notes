@@ -36,6 +36,9 @@ obj === null  // 检测为null  (一般用!判断null和其他一起)
  alert( 8 ** (1/3) ); // 2 (1 / 3 幂相当于开三次方)
 ```
 
+- 对 `undefined` 进行数字型转换`Number()`时，输出结果为 `NaN`，而非 `0`。
+- 对 `null` 进行`Number()`时，输出结果为`0`.
+
 ### 代码风格 推荐 stardardjs风格
 
 !> vscode 使用： 

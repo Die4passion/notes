@@ -27,7 +27,7 @@
   <!-- <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
   <script>
     window.$docsify = {
-      name: '<img src="assets/logo.png" data-origin="assets/logo.png" alt="logo" class="sidebar-logo">I think not',
+      name: 'I think not',
       //name: '小航的博客',
       // themeColor: '#25798A',
       repo: 'https://github.com/Die4passion',
@@ -36,13 +36,14 @@
       auto2top: true,
       autoHeader: false,
       loadNavbar: true,
-      // mergeNavbar: true,
-      maxLevel: 5,
-      subMaxLevel: 5,
+      mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
+      maxLevel: 6,
+      subMaxLevel: 6,
       search: {
         paths: 'auto',
-        placeholder: 'Search',
-        noData: 'No Results.',
+        placeholder: '🔍 找寻',
+        noData: '😒 未果',
+        depth: 6
       },
       scrollToTop: {
         auto: true,
@@ -62,6 +63,21 @@
         crossChapter: true,
         crossChapterText: true,
       },
+      // 字数统计
+      count:{
+        countable: true,
+        position: 'top',
+        margin: '12px',
+        float: 'left',
+        fontsize:'1.0em',
+        color:'#8ba39e',
+        language:'chinese',
+        localization: {
+          words: "",
+          minute: ""
+        },
+        isExpected: true
+      }
     }
 /*     var gitalk = new Gitalk({
           clientID: '31f1d7ca414b5627ed0c',
@@ -96,6 +112,9 @@
   <script src="assets/scripts/prisms/prism-scss.min.js"></script>
   <script src="assets/scripts/prisms/prism-sql.min.js"></script>
 
+  <!--字数统计-->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+
 
   <!-- 主题 -->
   <script src="assets/scripts/darklight-theme.min.js"></script>
@@ -104,6 +123,7 @@
   <script src="assets/scripts/scroll-to-top.min.js"></script>
   <script src="assets/scripts/emoji.min.js"></script>
   <script src="assets/scripts/docsify-copy-code.min.js"></script>
+
 </body>
 
 </html>
