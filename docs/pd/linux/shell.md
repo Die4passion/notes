@@ -10,7 +10,7 @@
   
 - `mtr xxxxx.com` 测试网络连接
   
-- `echo &quot;ls -l&quot; | at midnight` 在某个时间运行某个命令
+- `echo "ls -l" | at midnight` 在某个时间运行某个命令
   
 - `ps aux | sort -nk +4 | tail` 列出头十个最耗内存的进程
   
@@ -28,11 +28,11 @@
   
 - `ls -v | cat -n | while read n f; do ((n--)); mv -i -- $f banner_0$n.jpg; done` 批量重命名文件
   
-- `a=1;for i in *.jpg; do new=$(printf &quot;banner_0%d.jpg&quot; &quot;$a&quot;); mv -i -- $i $new; ((a++)); done` 也是批量重命名文件
+- `a=1;for i in *.jpg; do new=$(printf "banner_0%d.jpg" "$a"); mv -i -- $i $new; ((a++)); done` 也是批量重命名文件
   
 - `iconv` 文本文件转码
   
-- `-z &quot;${var}&quot; ` 空字符串 `-n &quot;${var}&quot;` 非空字符串
+- `-z "${var}"` 空字符串 `-n "${var}"` 非空字符串
   
 - ```bash
   # 彻底删除 xxxxx  rpm系统
@@ -42,7 +42,6 @@
   
 - `pandoc`
   
-
 ```bash
 
   # pandoc 用来转换文件 支持格式
@@ -157,7 +156,7 @@ set autoindent
 
 #### bash shell
 
-文件放在 `~/bin ` 目录下
+文件放在 `~/bin` 目录下
 
 ```bash
 file # 查看文件
@@ -166,7 +165,7 @@ stat # 文件或文件夹详细信息
 
 #### 一些有用的
 
-```
+```console
 # 生成图标  github readme风格
 https://shields.io
 

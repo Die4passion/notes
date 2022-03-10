@@ -16,13 +16,13 @@ uuid = universally unique identifier
 
 `df -h`     查看磁盘信息                 -h是 human
 
-`df -h . `  查看当前磁盘信息
+`df -h .`  查看当前磁盘信息
 
-`du `        查看文件大小
+`du`        查看文件大小
 
-`find . -name 'opsschool' -type d `     查找文件(d)或路径(f)  可正则
+`find . -name 'opsschool' -type d`     查找文件(d)或路径(f)  可正则
 
-`lsof -i  `  lists open files -internet
+`lsof -i`  lists open files -internet
 
 `cat file1 file2 > file3`    合并文件
 
@@ -40,7 +40,7 @@ uuid = universally unique identifier
 
 `sort`   排序
 
- `wc` 查看文件字节数等信息 
+ `wc` 查看文件字节数等信息
 
 > `crontab -e`
 
@@ -51,7 +51,7 @@ uuid = universally unique identifier
 
  eg:
 
-```
+```bash
  # .---------------- minute (0 - 59)
  # |   .------------- hour (0 - 23)s
  # |   |   .---------- day of month (1 - 31)
@@ -76,7 +76,7 @@ uuid = universally unique identifier
 
 `strace`    跟踪系统调用和信号    `参数 -c -T -e -o -i`  很多  需要看文档用
 
-`initctl`   ubuntu自带   centos需要`yum install upstart`    
+`initctl`   ubuntu自带   centos需要`yum install upstart`
 
 `dstat`    `yum install`   通用系统资源统计工具   `dstat -m 5 10`
 `nethogs`   `yum install`   网络流量监控工具
@@ -114,7 +114,7 @@ uuid = universally unique identifier
 | numberG             | 移动到第 number 行。例如，1G 移动到文件的第一行。 |
 | G                   | 移动到文件末尾。                       |
 
-```
+```bash
 # hjkl
 
 # 2w 向前移动两个单词
@@ -151,7 +151,7 @@ uuid = universally unique identifier
 | dG   | 从当前行到文件的末尾。          |
 | d20G | 从当前行到文件的第20行。        |
 
-```
+```bash
 # x 删除当前字符
 
 # dw 删除至当前单词末尾
@@ -167,7 +167,7 @@ uuid = universally unique identifier
 
 修改
 
-```
+```bash
 # i 插入文本
 
 # A 当前行末尾添加
@@ -179,7 +179,7 @@ uuid = universally unique identifier
 
 撤销
 
-```
+```bash
 # u 撤销
 
 # <ctrl>+r 取消撤销
@@ -198,7 +198,7 @@ uuid = universally unique identifier
 | yG   | 从当前行到文件末尾。           |
 | y20G | 从当前行到文件的第20行。        |
 
-```
+```bash
 # v 进入可视模式
 
 # y 复制
@@ -212,13 +212,13 @@ uuid = universally unique identifier
 
 状态
 
-```
+```bash
 # <ctrl>+g 显示当前行以及文件信息
 ```
 
 查找
 
-```
+```bash
 # / 正向查找（n：继续查找，N：相反方向继续查找）
 
 # ？ 逆向查找
@@ -236,7 +236,7 @@ uuid = universally unique identifier
 
 替换
 
-```
+```bash
 # :s/old/new 替换该行第一个匹配串
 
 # :s/old/new/g 替换全行的匹配串
@@ -297,22 +297,22 @@ telnet: connect to address 98.138.253.109: Connection timed out
 ```
 
 > ip,  ss,  traceroute, mtr, iftop, iperf, tcpdump 等命令/工具都是检测网络
-> 
+>
 > 都有很多选项和使用方法,具体自行google  
-> 
+>
 > traceroute 和mtr比较详细
 
 ## Common services
 
 ### dig + nsloopup(win)
 
-`yum install bind-utils` 
+`yum install bind-utils`
 
 `dig xxxx.com`
 
-> ##### Tools: *Speaking http* with `telnet`  /`netcat(nc)`  /`curl`
+> #### Tools: *Speaking http* with `telnet`  /`netcat(nc)`  /`curl`
 
-` nc -l 192.168.0.1 1234 > output.log`
+`nc -l 192.168.0.1 1234 > output.log`
 
 ## Programming 101
 
@@ -436,10 +436,10 @@ compress
 `mod_proxy_balancer` 和  `mod_jk`
 
 > nginx 自身支持
-> 
+>
 > HAProxy
-> 
-> 硬件 BIG-IP 
+>
+> 硬件 BIG-IP
 
 ## Configuration Management 101
 
@@ -453,4 +453,3 @@ compress
 | chef      | chef  (ruby和erlang) | docker      |                     | 否       | 文档好像还不错 |                   |
 
 ## Soft Skills 101
-

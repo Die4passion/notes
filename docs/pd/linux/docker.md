@@ -3,8 +3,8 @@
 > 使用脚本自动安装
 
 ```bash
-$ curl -fsSL get.docker.com -o get-docker.sh
-$ sudo sh get-docker.sh --mirror Aliyun
+curl -fsSL get.docker.com -o get-docker.sh
+sudo sh get-docker.sh --mirror Aliyun
 ```
 
 ### 2. 使用镜像
@@ -57,7 +57,7 @@ $ docker image ls --digests
 
 > 删除镜像
 
-```
+```bash
 # <镜像> 可以是 镜像短 ID、镜像长 ID、镜像名 或者 镜像摘要。
 $ docker image rm [选项] <镜像1> [<镜像2> ...]
 
@@ -135,7 +135,6 @@ ENV VERSION=1.0 DEBUG=on \
 
 > else
 
-```
+```bash
 # Ctrl-p 或Ctrl-q 推出一个实例而不终止 
 ```
-

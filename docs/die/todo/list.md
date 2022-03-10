@@ -1,26 +1,26 @@
 
-### 流程图 工具:
+### 流程图 工具
 
 - draw.io
-- 在线 [zenflow](https://www.zenflowchart.com/documents) 
+- 在线 [zenflow](https://www.zenflowchart.com/documents)
 - [code2flow](https://code2flow.com/)
 
 ### time management for system administrators (时间管理)
 
 - 把所有时间管理的东西放一起
 - 大脑只用于现在重要的事情, 其他使用外部存储
-   - 在床边放纸和笔。当一些事让你睡不着时,  把他写下来再睡
-   - 多用手机记录临时的想法
+  - 在床边放纸和笔。当一些事让你睡不着时,  把他写下来再睡
+  - 多用手机记录临时的想法
 - 每天早上花时间计划一天
 - 定期发生的事情开发例行公事
-   - 让每台服务器都以相同的状态运行 (包括更改配置和更新)
-      - `SaltStack` `Ansible` `Puppet` `chef` 等配置同步
-      - `docker` 等容器技术
-   - 编辑配置文件之前总是备份 (按日期)
+  - 让每台服务器都以相同的状态运行 (包括更改配置和更新)
+    - `SaltStack` `Ansible` `Puppet` `chef` 等配置同步
+    - `docker` 等容器技术
+  - 编辑配置文件之前总是备份 (按日期)
 - 常用命令alias
-   - `alias book='cd ~/projects/books/time/chapters'`
-   - `alias inva='cd ~/projects/inventory/groupa ; export INVSTYLE=A'`
-   - `alias rank='cd /home/rank/data && date >>.log'`
+  - `alias book='cd ~/projects/books/time/chapters'`
+  - `alias inva='cd ~/projects/inventory/groupa ; export INVSTYLE=A'`
+  - `alias rank='cd /home/rank/data && date >>.log'`
 
 ### git flow
 
@@ -51,11 +51,11 @@
 
 - 持续集成 / 交付 / 部署
 - staging / production 环境
-- 容器 
+- 容器
 
 ### work flow
 
-#### scrum:
+#### scrum
 
 - sprint
 - daily scrum
@@ -86,12 +86,11 @@
 - ~~TCP并发服务器, 每个客户一个子进程, 错误的~~
 
 - TCP预先派生子进程, accept 无锁保护
-  
-   - 优点: 无需引入父进程执行fork
-   - 缺点: 必须在启动阶段猜测需要预创建多少子进程
-   - 可以监控闲置子进程数, 动态增减子进程数
-   - 由于子进程阻塞在accept上, 但是当一个连接到达时只会有一个子进程获得连接. 但是所有的子进程都被唤醒了, 这就叫惊群, 影响性能.
-   - 客户端不多的时候, 比如10个, 使用这个比较方便
+  - 优点: 无需引入父进程执行fork
+  - 缺点: 必须在启动阶段猜测需要预创建多少子进程
+  - 可以监控闲置子进程数, 动态增减子进程数
+  - 由于子进程阻塞在accept上, 但是当一个连接到达时只会有一个子进程获得连接. 但是所有的子进程都被唤醒了, 这就叫惊群, 影响性能.
+  - 客户端不多的时候, 比如10个, 使用这个比较方便
 
 - TCP预先派生子进程, 使用文件上锁保护accept
 
@@ -124,4 +123,3 @@
 2. 可复现
 3. 不重复
 4. 不可预见性
-

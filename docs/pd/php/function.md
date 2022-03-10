@@ -1,7 +1,6 @@
 
 > For every smile shall wither, the hopeful laughter fade, the cup of joys illusions bashed from the craving lips. And as all hopes are shattered, the last of passions scattered, the gale of bitter failure is all that shall remain.
 
-
 !> 比较好的方法
 
 ```php

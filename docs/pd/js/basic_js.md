@@ -6,9 +6,9 @@
 
 - **MDN（Mozilla）JavaScript 索引** 是一个带有用例和其他信息的手册。它是一个获取关于个别语言函数、方法等深入信息的很好的来源。
   
-  你可以在 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference 阅读它。
+  你可以在 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference> 阅读它。
   
-  虽然，利用互联网搜索通常是最好的选择。只需在查询时输入“MDN [关键字]”，例如 https://google.com/search?q=MDN+parseInt 搜索 parseInt 函数。
+  虽然，利用互联网搜索通常是最好的选择。只需在查询时输入“MDN [关键字]”，例如 <https://google.com/search?q=MDN+parseInt> 搜索 parseInt 函数。
 
 ## JavaScript 基础知识
 
@@ -41,7 +41,8 @@ obj === null  // 检测为null  (一般用!判断null和其他一起)
 
 ### 代码风格 推荐 stardardjs风格
 
-!> vscode 使用： 
+!> vscode 使用：
+
 ```bash
 npm i standard -g
 npm i eslint -g
@@ -49,14 +50,16 @@ npm i eslint-plugin-vue@next -g
 npm i eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import 
 eslint-plugin-node -g
 ```
-- vscode插件：`prittier-standard ` 
-- vscode设置： 
+
+- vscode插件：`prittier-standard`
+- vscode设置：
   
 ```json
 "[javascript]": {
         "editor.defaultFormatter": "numso.prettier-standard-vscode"
     },
 ```
+
 !> 限制
 
 - 除需要转义的情况外，**字符串统一使用单引号**。
@@ -101,15 +104,14 @@ while (m = text.match(expr)) {
   var myVar = 'hello'            // ✓ ok
   var my_var = 'hello'           // ✗ avoid
 ```
+
 - **不允许有多余的行末逗号**。
-- 
 
 > 使用ESlint 做代码自动检测 备选jshlint prettier好像不错 webstorm自带
-
+>
 > 使用mocha进行自动化测试
-
+>
 > 使用babel新规范
-
 
 ### 文件头加上 'use strict' 进入严格模式
 
@@ -141,7 +143,7 @@ alert( num.toFixed(5) ); // "12.34000", added zeroes to make exactly 5 digits
 // 浮点数运算一定要转为整数 再除, 同样适用于 php java c perl ruby
 ```
 
->  字符串
+> 字符串
 
 ```javascript
 //只要记住：if (~str.indexOf(...)) 读作 “if found”。
