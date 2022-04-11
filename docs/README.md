@@ -1,4 +1,4 @@
-see https://die4passion.github.io/notes/#/
+see <https://die4passion.github.io/notes/#/>
 
 ```console
 大鹏一日同风起，扶摇直上九万里。

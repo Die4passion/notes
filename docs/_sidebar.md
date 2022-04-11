@@ -2,6 +2,7 @@
 
 - [庖丁解牛](/pd/)
   
+  - [obsidian 笔记流](/pd/note-flow.md)
   - Linux
     - [docker 使用](/pd/linux/docker.md)
     - [ops-school 笔记](/pd/linux/ops.md)

@@ -64,14 +64,14 @@
         crossChapterText: true,
       },
       // 字数统计
-      count:{
+      count: {
         countable: true,
         position: 'top',
         margin: '12px',
         float: 'left',
-        fontsize:'1.0em',
-        color:'#8ba39e',
-        language:'chinese',
+        fontsize: '1.0em',
+        color: '#8ba39e',
+        language: 'chinese',
         localization: {
           words: "",
           minute: ""
@@ -80,16 +80,16 @@
       }
     }
 /*     var gitalk = new Gitalk({
-          clientID: '31f1d7ca414b5627ed0c',
-          clientSecret: '4c949459ac60c2f1f68e42a8887b1f510569a81e',
-          repo: 'notes',
-          owner: 'Die4passion',
-          admin: ['Die4passion'],
-          // id: location.pathname,      // Ensure uniqueness and length less than 50
-          distractionFreeMode: false  // Facebook-like distraction free mode
-        })
-    
-        gitalk.render('gitalk-container') */
+              clientID: '31f1d7ca414b5627ed0c',
+              clientSecret: '4c949459ac60c2f1f68e42a8887b1f510569a81e',
+              repo: 'notes',
+              owner: 'Die4passion',
+              admin: ['Die4passion'],
+              // id: location.pathname,      // Ensure uniqueness and length less than 50
+              distractionFreeMode: false  // Facebook-like distraction free mode
+            })
+        
+            gitalk.render('gitalk-container') */
   </script>
   <script src="assets/scripts/docsify.min.js"></script>
 
@@ -124,6 +124,13 @@
   <script src="assets/scripts/emoji.min.js"></script>
   <script src="assets/scripts/docsify-copy-code.min.js"></script>
 
-</body>
+  <!-- footnote -->
+
+  <!-- mermaid -->
+  <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
+  <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
+
+</body>->
 
 </html>
