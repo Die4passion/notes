@@ -235,5 +235,7 @@ markdown 是非常简单好学的，推荐 [typora的文档](https://support.typ
 
 !> 转载请注明作者 Die4passion
 
+已发表到知乎: [如何使用Obsidian软件?](https://www.zhihu.com/question/401972085/answer/2435058005)
+
 > 和我讨论
 >> q: 465335731 答案是 李白
