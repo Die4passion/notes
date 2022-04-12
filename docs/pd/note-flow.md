@@ -107,7 +107,7 @@ hider 和 minimal 主题设置自己选择，不必和他一样
   - calendar
   - collapse all (折叠/展开文件树,非必须)
   - floating toc (一个浮动的大纲,非必须)
-  - todo pro (我自己写的哈哈) [日记增强插件 by Die4passion](https://forum-zh.obsidian.md/t/topic/6291/9)
+  - todo pro (我自己写的哈哈) [日记增强插件 by Die4passion](https://forum-zh.obsidian.md/t/topic/6291)
     - 主要用来写日记的时候同步todo
 - 常用快捷键
   - `ctrl + s` 保存文件
