@@ -235,6 +235,11 @@ markdown 是非常简单好学的，推荐 [typora的文档](https://support.typ
 
 ## 补充资源
 
+### bilibili视频
+
+- [Obsidian笔记流分享 和 知识管理之浅见_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ur4y1H713)
+- [Obsidian笔记流分享 和 知识管理之浅见（二）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1uZ4y1m7La)
+
 ### floating-toc-plugin
 
 [改动版本打包下载](https://wwd.lanzouy.com/iUh0A03fibra)，解压到 `.obsidian/plugins` 目录下即可
