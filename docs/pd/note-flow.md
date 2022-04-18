@@ -233,6 +233,12 @@ markdown 是非常简单好学的，推荐 [typora的文档](https://support.typ
 
 我媳妇是物理老师，不到半个小时就教会了她，而且她还反过来教我使用 `latex` 语法, 我好像不怎么用得上那个 `ψ(._. )>`。她现在学 ps, 说用这个写笔记比word和其他笔记软件爽多了哈哈。(她用的本地编辑器 `marktext`)
 
+## 补充资源
+
+### floating-toc-plugin
+
+[改动版本打包下载](https://wwd.lanzouy.com/iUh0A03fibra)，解压到 `.obsidian/plugins` 目录下即可
+
 !> 转载请注明作者 Die4passion
 
 已发表到知乎: [如何使用Obsidian软件?](https://www.zhihu.com/question/401972085/answer/2435058005)
