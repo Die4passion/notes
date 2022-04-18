@@ -237,5 +237,10 @@ markdown 是非常简单好学的，推荐 [typora的文档](https://support.typ
 
 已发表到知乎: [如何使用Obsidian软件?](https://www.zhihu.com/question/401972085/answer/2435058005)
 
+B站视频:
+
+- [Obsidian笔记流分享 和 知识管理之浅见_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ur4y1H713)
+- [Obsidian笔记流分享 和 知识管理之浅见（二）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1uZ4y1m7La)
+
 > 和我讨论
 >> q: 465335731 答案是 李白
