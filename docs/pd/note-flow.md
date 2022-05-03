@@ -61,6 +61,7 @@
 ### 4. 过度追求 `all-in-one`
 
 首先，`all-in-one` 并不等于错误。仅仅是一种取舍。我更倾向于让工具做他最擅长的事情。
+
 obsidian 和 vscode 最像，而不是其他笔记软件，仅仅从设计思路来看的话。两者都支持第三方插件，基于 electron。开放的生态让他们有了更多的可能性，也更需要好的使用者。我的观点是非必要，绝不增加使用新的插件。
 
 过度的例子:
@@ -203,6 +204,7 @@ note & project .-> zk
 然后，我想起今天准备看一篇文章「Python与 R 在数据处理上的异同」。
 
 我就在 `daily/YYYY-mm-dd.md/## todo` 下新建一个子标题 `### read` 写个 todo 列表。
+
 todo 列表中加上这篇文章的链接。
 
 晚上开始看了，觉得大有所获，于是新建 `_inbox/python-r-diff.md` 类似的。一边看一边记录整理。双链到 `daily` 中。
@@ -247,11 +249,6 @@ markdown 是非常简单好学的，推荐 [typora的文档](https://support.typ
 !> 转载请注明作者 Die4passion
 
 已发表到知乎: [如何使用Obsidian软件?](https://www.zhihu.com/question/401972085/answer/2435058005)
-
-B站视频:
-
-- [Obsidian笔记流分享 和 知识管理之浅见_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ur4y1H713)
-- [Obsidian笔记流分享 和 知识管理之浅见（二）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1uZ4y1m7La)
 
 > 和我讨论
 >> q: 465335731 答案是 李白
